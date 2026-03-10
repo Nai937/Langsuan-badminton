@@ -1,8 +1,0 @@
-{
-  "generated_at": "2026-01-01T00:00:00+07:00",
-  "period_from": "2026-01-01",
-  "period_to": "2026-01-31",
-  "bookings": [
-    {"court": 1, "date": "2026-01-01", "start_time": "18:00", "end_time": "20:00"}
-  ]
-}
