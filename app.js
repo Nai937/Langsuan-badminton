@@ -262,27 +262,28 @@ function getKwonStatus(dateStr, court, hour) {
 }
 
 /**
- * Returns 'booked', 'kwon_light', 'kwon_heavy', or 'available'
+ * Returns { status, bookerName }
+ * status: 'booked', 'kwon_light', 'kwon_heavy', or 'available'
  * Booked takes priority over ก๊วน
  */
 function getSlotStatus(bookings, date, court, hour) {
   const bookingList = bookings?.bookings || [];
 
   // Check if this slot is booked
-  const isBooked = bookingList.some((b) => {
+  const matchedBooking = bookingList.find((b) => {
     if (b.court !== court || b.date !== date) return false;
     const startH = parseInt(b.start_time.split(':')[0], 10);
     const endH = parseInt(b.end_time.split(':')[0], 10);
     return hour >= startH && hour < endH;
   });
 
-  if (isBooked) return 'booked';
+  if (matchedBooking) return { status: 'booked', bookerName: matchedBooking.booker_name || 'จอง' };
 
   // Check kwon
   const kwon = getKwonStatus(date, court, hour);
-  if (kwon) return kwon;
+  if (kwon) return { status: kwon, bookerName: null };
 
-  return 'available';
+  return { status: 'available', bookerName: null };
 }
 
 // ===== RENDER GRID =====
@@ -297,10 +298,10 @@ function renderGrid(bookings, date) {
   }
 
   const statusConfig = {
-    available: { label: 'ว่าง', className: 'slot-available' },
-    booked: { label: 'จอง', className: 'slot-booked' },
+    available:  { label: 'ว่าง',       className: 'slot-available' },
+    booked:     { label: 'จอง',        className: 'slot-booked' },
     kwon_light: { label: 'ก๊วนมือเบา', className: 'slot-kwon-light' },
-    kwon_heavy: { label: 'จอยก๊วน', className: 'slot-kwon-heavy' },
+    kwon_heavy: { label: 'จอยก๊วน',   className: 'slot-kwon-heavy' },
   };
 
   // Header: คอร์ท | 15:00-16:00 | 16:00-17:00 | ... | 22:00-23:00
@@ -324,9 +325,10 @@ function renderGrid(bookings, date) {
     html += `<tr><td class="court-label">คอร์ท ${court}</td>`;
 
     HOURS.forEach((hour) => {
-      const status = getSlotStatus(bookings, date, court, hour);
+      const { status, bookerName } = getSlotStatus(bookings, date, court, hour);
       const config = statusConfig[status];
-      html += `<td><span class="slot ${config.className}">${config.label}</span></td>`;
+      const label = (status === 'booked' && bookerName) ? bookerName : config.label;
+      html += `<td><span class="slot ${config.className}">${label}</span></td>`;
     });
 
     html += '</tr>';
