@@ -1,50 +1,8 @@
 {
-  "generated_at": "2026-03-20T21:29:35+07:00",
-  "period_from": "2026-03-20",
-  "period_to": "2026-04-19",
+  "generated_at": "2026-03-21T15:17:18+07:00",
+  "period_from": "2026-03-21",
+  "period_to": "2026-04-20",
   "bookings": [
-    {
-      "court": 1,
-      "date": "2026-03-20",
-      "start_time": "15:00",
-      "end_time": "17:00",
-      "booker_name": "นกแก้ว"
-    },
-    {
-      "court": 4,
-      "date": "2026-03-20",
-      "start_time": "15:00",
-      "end_time": "17:00",
-      "booker_name": "เซิ้น"
-    },
-    {
-      "court": 2,
-      "date": "2026-03-20",
-      "start_time": "16:00",
-      "end_time": "17:00",
-      "booker_name": "ภัชชา"
-    },
-    {
-      "court": 1,
-      "date": "2026-03-20",
-      "start_time": "17:00",
-      "end_time": "19:00",
-      "booker_name": "โกเจี๊ยบ"
-    },
-    {
-      "court": 4,
-      "date": "2026-03-20",
-      "start_time": "17:00",
-      "end_time": "18:00",
-      "booker_name": "แพม"
-    },
-    {
-      "court": 4,
-      "date": "2026-03-20",
-      "start_time": "18:00",
-      "end_time": "19:00",
-      "booker_name": "ส้มแป้น"
-    },
     {
       "court": 1,
       "date": "2026-03-21",
@@ -181,6 +139,13 @@
     {
       "court": 1,
       "date": "2026-03-27",
+      "start_time": "15:00",
+      "end_time": "17:00",
+      "booker_name": "นกแก้ว"
+    },
+    {
+      "court": 1,
+      "date": "2026-03-27",
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "โกเจี๊ยบ"
@@ -205,13 +170,6 @@
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "ลีโอพุต"
-    },
-    {
-      "court": 1,
-      "date": "2026-03-31",
-      "start_time": "15:00",
-      "end_time": "17:00",
-      "booker_name": "นกแก้ว"
     },
     {
       "court": 1,
@@ -335,6 +293,13 @@
     {
       "court": 1,
       "date": "2026-04-17",
+      "start_time": "17:00",
+      "end_time": "19:00",
+      "booker_name": "โกเจี๊ยบ"
+    },
+    {
+      "court": 1,
+      "date": "2026-04-20",
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "โกเจี๊ยบ"
