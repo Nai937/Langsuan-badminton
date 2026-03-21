@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-21T15:17:18+07:00",
+  "generated_at": "2026-03-21T16:34:10+07:00",
   "period_from": "2026-03-21",
   "period_to": "2026-04-20",
   "bookings": [
@@ -179,6 +179,13 @@
       "booker_name": "Mama House Cafe'"
     },
     {
+      "court": 4,
+      "date": "2026-03-31",
+      "start_time": "17:00",
+      "end_time": "19:00",
+      "booker_name": "นกแก้ว"
+    },
+    {
       "court": 1,
       "date": "2026-04-01",
       "start_time": "17:00",
@@ -212,13 +219,6 @@
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "โกเจี๊ยบ"
-    },
-    {
-      "court": 4,
-      "date": "2026-04-03",
-      "start_time": "17:00",
-      "end_time": "19:00",
-      "booker_name": "นกแก้ว"
     },
     {
       "court": 1,
@@ -260,13 +260,6 @@
       "date": "2026-04-08",
       "start_time": "17:00",
       "end_time": "19:00",
-      "booker_name": "นกแก้ว"
-    },
-    {
-      "court": 1,
-      "date": "2026-04-09",
-      "start_time": "15:00",
-      "end_time": "17:00",
       "booker_name": "นกแก้ว"
     },
     {
@@ -289,6 +282,13 @@
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "โกเจี๊ยบ"
+    },
+    {
+      "court": 4,
+      "date": "2026-04-10",
+      "start_time": "17:00",
+      "end_time": "19:00",
+      "booker_name": "นกแก้ว"
     },
     {
       "court": 1,
