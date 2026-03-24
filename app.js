@@ -205,18 +205,19 @@ function initSlideshow() {
 async function loadBookings() {
   showGridLoading();
   try {
-    // Try live API first (works when served from the same FastAPI server locally)
-    const isLocalServer = ['localhost', '127.0.0.1'].includes(window.location.hostname);
-    if (isLocalServer) {
-      const res = await fetch(`/api/public/bookings?date=${selectedDate}`);
-      if (res.ok) {
-        const data = await res.json();
-        bookingsData = { generated_at: data.generated_at, bookings: data.bookings };
-        renderGrid(bookingsData, selectedDate);
-        return;
-      }
+    // Always try live API first (relative path works from any hostname when served by FastAPI)
+    const res = await fetch(`/api/public/bookings?date=${selectedDate}`);
+    if (res.ok) {
+      const data = await res.json();
+      bookingsData = { generated_at: data.generated_at, bookings: data.bookings };
+      renderGrid(bookingsData, selectedDate);
+      return;
     }
-    // Fallback: static JSON (for GitHub Pages)
+  } catch (e) {
+    // API unavailable, fall through to static JSON fallback
+  }
+  // Fallback: static JSON (for GitHub Pages or offline)
+  try {
     const url = `./data/bookings.json?t=${Date.now()}`;
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -295,6 +296,27 @@ function renderGrid(bookings, date) {
   const dateDisplay = document.getElementById('date-display-text');
   if (dateDisplay) {
     dateDisplay.textContent = formatThaiDate(date);
+  }
+
+  // Check if Sunday — court is closed
+  const [cy, cm, cd] = date.split('-').map(Number);
+  if (new Date(cy, cm - 1, cd).getDay() === 0) {
+    container.innerHTML = `
+      <div class="closed-state">
+        <div class="closed-icon-wrap">
+          <svg class="closed-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/>
+          </svg>
+        </div>
+        <h3 class="closed-title">สนามปิดทำการ</h3>
+        <p class="closed-subtitle">วันอาทิตย์ หยุดทุกสัปดาห์</p>
+        <p class="closed-note">กรุณาเลือกวันจันทร์ – เสาร์ หรือติดต่อสอบถามข้อมูลเพิ่มเติม</p>
+      </div>
+    `;
+    container.classList.add('fade-in-up');
+    setTimeout(() => container.classList.remove('fade-in-up'), 600);
+    return;
   }
 
   const statusConfig = {
