@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T16:37:14+07:00",
+  "generated_at": "2026-06-01T18:11:16+07:00",
   "bookings": [
     {
       "court": 1,
@@ -3563,6 +3563,20 @@
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "โกเจี๊ยบ"
+    },
+    {
+      "court": 4,
+      "date": "2026-06-01",
+      "start_time": "17:00",
+      "end_time": "18:00",
+      "booker_name": "โปเต้"
+    },
+    {
+      "court": 4,
+      "date": "2026-06-01",
+      "start_time": "18:00",
+      "end_time": "19:00",
+      "booker_name": "หนึ่ง"
     },
     {
       "court": 1,
