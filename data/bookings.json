@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T18:35:31+07:00",
+  "generated_at": "2026-06-02T18:54:59+07:00",
   "bookings": [
     {
       "court": 1,
@@ -3619,6 +3619,13 @@
       "start_time": "19:00",
       "end_time": "20:00",
       "booker_name": "แบดป๊ะหละ"
+    },
+    {
+      "court": 1,
+      "date": "2026-06-02",
+      "start_time": "21:00",
+      "end_time": "22:00",
+      "booker_name": "โอโซน"
     },
     {
       "court": 1,
