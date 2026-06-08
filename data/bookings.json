@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T16:44:12+07:00",
+  "generated_at": "2026-06-08T15:11:21+07:00",
   "bookings": [
     {
       "court": 1,
@@ -3743,7 +3743,7 @@
       "court": 1,
       "date": "2026-06-06",
       "start_time": "19:00",
-      "end_time": "20:00",
+      "end_time": "21:00",
       "booker_name": "จูน"
     },
     {
@@ -3759,6 +3759,13 @@
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "จุ๋ง"
+    },
+    {
+      "court": 1,
+      "date": "2026-06-08",
+      "start_time": "19:00",
+      "end_time": "20:00",
+      "booker_name": "ครูอีฟ"
     },
     {
       "court": 1,
@@ -3920,13 +3927,6 @@
       "start_time": "18:00",
       "end_time": "19:00",
       "booker_name": "นก"
-    },
-    {
-      "court": 1,
-      "date": "2026-06-20",
-      "start_time": "15:00",
-      "end_time": "17:00",
-      "booker_name": "นกแก้ว"
     },
     {
       "court": 1,
@@ -4382,6 +4382,13 @@
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "โกเจี๊ยบ"
+    },
+    {
+      "court": 1,
+      "date": "2026-08-01",
+      "start_time": "15:00",
+      "end_time": "17:00",
+      "booker_name": "นกแก้ว"
     }
   ]
 }
