@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T19:15:25+07:00",
+  "generated_at": "2026-06-23T19:23:40+07:00",
   "bookings": [
     {
       "court": 1,
@@ -4412,7 +4412,7 @@
       "booker_name": "นก"
     },
     {
-      "court": 4,
+      "court": 1,
       "date": "2026-07-13",
       "start_time": "19:00",
       "end_time": "21:00",
