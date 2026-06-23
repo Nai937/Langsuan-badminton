@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T15:24:24+07:00",
+  "generated_at": "2026-06-23T17:44:21+07:00",
   "bookings": [
     {
       "court": 1,
@@ -4123,6 +4123,13 @@
       "start_time": "19:00",
       "end_time": "21:00",
       "booker_name": "แบดป๊ะหละ"
+    },
+    {
+      "court": 1,
+      "date": "2026-06-23",
+      "start_time": "21:00",
+      "end_time": "22:00",
+      "booker_name": "จูน"
     },
     {
       "court": 1,
