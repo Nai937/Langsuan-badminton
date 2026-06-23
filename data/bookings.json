@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T15:18:02+07:00",
+  "generated_at": "2026-06-23T15:24:24+07:00",
   "bookings": [
     {
       "court": 1,
@@ -3871,13 +3871,6 @@
       "start_time": "16:00",
       "end_time": "17:00",
       "booker_name": "พันช์"
-    },
-    {
-      "court": 4,
-      "date": "2026-06-13",
-      "start_time": "16:00",
-      "end_time": "18:00",
-      "booker_name": "กิ๊ก"
     },
     {
       "court": 1,
