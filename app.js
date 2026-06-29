@@ -424,3 +424,115 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load bookings
   loadBookings();
 });
+
+// ===== COMMON ROOM PUBLIC SCHEDULE =====
+const CR_PUB_OPEN  = 8;
+const CR_PUB_CLOSE = 20;
+const CR_PUB_HOURS = Array.from({length: CR_PUB_CLOSE - CR_PUB_OPEN}, (_, i) => CR_PUB_OPEN + i);
+let crSelectedDate = getTodayDateString();
+
+function crPad(n) { return String(n).padStart(2,'0'); }
+
+function crGoToday() {
+  crSelectedDate = getTodayDateString();
+  const picker = document.getElementById('cr-date-picker');
+  if (picker) picker.value = crSelectedDate;
+  crUpdateDateDisplay();
+  loadCRBookings();
+}
+
+function crChangeDate(delta) {
+  const d = new Date(crSelectedDate + 'T00:00:00');
+  d.setDate(d.getDate() + delta);
+  crSelectedDate = d.toISOString().slice(0,10);
+  const picker = document.getElementById('cr-date-picker');
+  if (picker) picker.value = crSelectedDate;
+  crUpdateDateDisplay();
+  loadCRBookings();
+}
+
+function crUpdateDateDisplay() {
+  const el = document.getElementById('cr-date-display');
+  if (el) el.textContent = formatThaiDate(crSelectedDate);
+}
+
+async function loadCRBookings() {
+  const container = document.getElementById('cr-grid-container');
+  if (!container) return;
+  container.innerHTML = '<div class="loading-state"><div class="spinner"></div><span>กำลังโหลด...</span></div>';
+  try {
+    const res = await fetch(`/api/public/bookings?date=${crSelectedDate}`);
+    const data = await res.json();
+    renderCRPublicGrid(data.common_room || []);
+  } catch (e) {
+    container.innerHTML = '<p style="color:#ef4444;text-align:center;padding:1rem">โหลดข้อมูลไม่สำเร็จ</p>';
+  }
+}
+
+function renderCRPublicGrid(bookings) {
+  const container = document.getElementById('cr-grid-container');
+  if (!container) return;
+
+  const cols = CR_PUB_HOURS.length;
+  let html = `<div style="overflow-x:auto;border-radius:14px;box-shadow:0 4px 20px rgba(79,70,229,0.12);border:1px solid #c4b5fd">
+  <div style="display:grid;grid-template-columns:90px repeat(${cols},minmax(52px,1fr));min-width:700px">
+    <div style="background:#f5f3ff;padding:0.4rem 0.5rem;font-size:0.7rem;font-weight:700;color:#6d28d9;border-right:1px solid #ddd8fe;border-bottom:2px solid #a78bfa;display:flex;align-items:flex-end;justify-content:center">เวลา</div>
+    ${CR_PUB_HOURS.map(h => `
+    <div style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;font-size:0.7rem;font-weight:600;text-align:center;padding:0.4rem 0.1rem;border-right:1px solid rgba(255,255,255,0.12);border-bottom:2px solid rgba(255,255,255,0.2)">${h}:00</div>`).join('')}
+
+    <div style="background:#f5f3ff;padding:0.35rem 0.4rem;font-size:0.73rem;font-weight:600;color:#4f46e5;border-right:2px solid #a78bfa;border-bottom:1px solid #ede9fe;display:flex;align-items:center;justify-content:center;min-height:48px">ห้อง</div>`;
+
+  for (let hi = 0; hi < CR_PUB_HOURS.length; hi++) {
+    const h = CR_PUB_HOURS[hi];
+    const bk = bookings.find(b => parseInt(b.start_time) <= h && parseInt(b.end_time) > h);
+    if (bk) {
+      if (parseInt(bk.start_time) === h) {
+        const span = parseInt(bk.end_time) - parseInt(bk.start_time);
+        html += `<div style="grid-column:span ${span};background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;padding:0.3rem 0.5rem;border-radius:6px;margin:3px 2px;font-size:0.73rem;font-weight:600;display:flex;flex-direction:column;justify-content:center;box-shadow:0 2px 8px rgba(79,70,229,0.3)">
+          <span style="font-weight:700">${bk.booker_name}</span>
+          <span style="font-size:0.63rem;opacity:0.85">${bk.start_time}–${bk.end_time}</span>
+        </div>`;
+      }
+    } else {
+      html += `<div style="background:#fafafe;border-right:1px solid #ede9fe;border-bottom:1px solid #ede9fe;min-height:48px"></div>`;
+    }
+  }
+
+  html += `</div></div>`;
+
+  if (bookings.length === 0) {
+    html += `<div style="text-align:center;padding:1.5rem;color:#7c3aed;font-size:0.95rem;background:#f5f3ff;border-radius:0 0 14px 14px">
+      <p style="font-size:1.5rem;margin-bottom:0.3rem">✅</p>
+      <p style="font-weight:600">ว่างทั้งวัน — 08:00 ถึง 20:00</p>
+    </div>`;
+  } else {
+    const booked = bookings.reduce((acc,b) => acc + (parseInt(b.end_time) - parseInt(b.start_time)), 0);
+    html += `<div style="display:flex;gap:1rem;padding:0.75rem 1rem;background:#f5f3ff;border-radius:0 0 14px 14px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:0.5rem">
+        <div style="width:14px;height:14px;border-radius:4px;background:linear-gradient(135deg,#4f46e5,#7c3aed)"></div>
+        <span style="font-size:0.78rem;color:#4c1d95;font-weight:600">จอง ${booked} ชม.</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem">
+        <div style="width:14px;height:14px;border-radius:4px;background:#fafafe;border:1px solid #a78bfa"></div>
+        <span style="font-size:0.78rem;color:#6d28d9">ว่าง ${12 - booked} ชม.</span>
+      </div>
+    </div>`;
+  }
+
+  container.innerHTML = html;
+}
+
+// Init CR section
+document.addEventListener('DOMContentLoaded', () => {
+  const crPicker = document.getElementById('cr-date-picker');
+  if (crPicker) {
+    crPicker.value = crSelectedDate;
+    crPicker.addEventListener('change', e => {
+      crSelectedDate = e.target.value;
+      crUpdateDateDisplay();
+      loadCRBookings();
+    });
+  }
+  crUpdateDateDisplay();
+  loadCRBookings();
+});
