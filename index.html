@@ -61,32 +61,6 @@
       <div class="slideshow-dots" id="slideshow-dots" role="tablist" aria-label="เลือกภาพ"></div>
     </section>
 
-    <!-- ===== COMMON ROOM SCHEDULE ===== -->
-    <section class="section" id="common-room-section" aria-labelledby="cr-title" style="background:linear-gradient(135deg,#f5f3ff 0%,#ede9fe 100%)">
-      <div class="section-inner">
-        <h2 class="section-title" id="cr-title" style="color:#4f46e5">
-          <span class="section-icon" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-          </span>
-          ตารางจอง Common Room
-        </h2>
-        <p class="section-subtitle">ตรวจสอบการจองห้อง Common Room — เปิด 08:00–20:00 ทุกวัน</p>
-
-        <!-- Date Navigation -->
-        <div class="date-nav" role="group" aria-label="เลือกวันที่">
-          <button class="date-nav-btn secondary" onclick="crChangeDate(-1)">&#8249; ก่อนหน้า</button>
-          <button class="date-nav-btn" onclick="crGoToday()" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)">วันนี้</button>
-          <input type="date" id="cr-date-picker" class="date-input">
-          <button class="date-nav-btn secondary" onclick="crChangeDate(1)">ถัดไป &#8250;</button>
-          <span class="date-display" id="cr-date-display" aria-live="polite"></span>
-        </div>
-
-        <div id="cr-grid-container" role="region" aria-label="ตาราง Common Room" aria-live="polite" style="margin-top:1rem">
-          <div class="loading-state"><div class="spinner"></div><span>กำลังโหลด...</span></div>
-        </div>
-      </div>
-    </section>
-
     <!-- ===== COURT AVAILABILITY ===== -->
     <section class="section availability-section" id="availability" aria-labelledby="avail-title">
       <div class="section-inner">
