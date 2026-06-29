@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T19:56:23+07:00",
+  "generated_at": "2026-06-30T02:32:24+07:00",
   "bookings": [
     {
       "court": 1,
@@ -4746,6 +4746,20 @@
       "start_time": "15:00",
       "end_time": "17:00",
       "booker_name": "นกแก้ว"
+    }
+  ],
+  "common_room": [
+    {
+      "date": "2026-06-29",
+      "start_time": "08:00",
+      "end_time": "09:00",
+      "booker_name": "นาย"
+    },
+    {
+      "date": "2026-06-30",
+      "start_time": "10:00",
+      "end_time": "16:00",
+      "booker_name": "นาย"
     }
   ]
 }
