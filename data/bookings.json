@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T15:15:55+07:00",
+  "generated_at": "2026-07-14T15:51:14+07:00",
   "bookings": [
     {
       "court": 1,
@@ -4666,13 +4666,6 @@
     {
       "court": 1,
       "date": "2026-07-14",
-      "start_time": "18:00",
-      "end_time": "19:00",
-      "booker_name": "นก"
-    },
-    {
-      "court": 1,
-      "date": "2026-07-14",
       "start_time": "19:00",
       "end_time": "20:00",
       "booker_name": "5ลูกเหนื่อย"
@@ -4692,13 +4685,6 @@
       "booker_name": "โกเจี๊ยบ"
     },
     {
-      "court": 4,
-      "date": "2026-07-15",
-      "start_time": "18:00",
-      "end_time": "19:00",
-      "booker_name": "นก"
-    },
-    {
       "court": 1,
       "date": "2026-07-15",
       "start_time": "19:00",
@@ -4711,13 +4697,6 @@
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "แบ๊ดแบ๊ด"
-    },
-    {
-      "court": 4,
-      "date": "2026-07-16",
-      "start_time": "18:00",
-      "end_time": "19:00",
-      "booker_name": "นก"
     },
     {
       "court": 1,
@@ -5070,6 +5049,13 @@
       "booker_name": "โกเจี๊ยบ"
     },
     {
+      "court": 4,
+      "date": "2026-08-14",
+      "start_time": "18:00",
+      "end_time": "19:00",
+      "booker_name": "นก"
+    },
+    {
       "court": 1,
       "date": "2026-08-15",
       "start_time": "15:00",
@@ -5082,6 +5068,13 @@
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "โกเจี๊ยบ"
+    },
+    {
+      "court": 4,
+      "date": "2026-08-17",
+      "start_time": "18:00",
+      "end_time": "19:00",
+      "booker_name": "นก"
     },
     {
       "court": 4,
@@ -5131,6 +5124,13 @@
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "โกเจี๊ยบ"
+    },
+    {
+      "court": 4,
+      "date": "2026-08-21",
+      "start_time": "18:00",
+      "end_time": "19:00",
+      "booker_name": "นก"
     },
     {
       "court": 1,
