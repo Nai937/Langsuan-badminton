@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T18:15:27+07:00",
+  "generated_at": "2026-08-04T16:56:59+07:00",
   "bookings": [
     {
       "court": 1,
@@ -5161,14 +5161,14 @@
       "booker_name": "นก"
     },
     {
-      "court": 4,
+      "court": 1,
       "date": "2026-08-04",
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "BadBadtz"
     },
     {
-      "court": 1,
+      "court": 4,
       "date": "2026-08-04",
       "start_time": "18:00",
       "end_time": "19:00",
