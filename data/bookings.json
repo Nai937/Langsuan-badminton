@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T18:18:59+07:00",
+  "generated_at": "2026-08-06T15:02:08+07:00",
   "bookings": [
     {
       "court": 1,
@@ -5236,6 +5236,13 @@
       "start_time": "19:00",
       "end_time": "20:00",
       "booker_name": "5ลูกเหนื่อย"
+    },
+    {
+      "court": 1,
+      "date": "2026-08-06",
+      "start_time": "20:00",
+      "end_time": "21:00",
+      "booker_name": "น้องฝ้ายชมพูแรงฤทธิ์"
     },
     {
       "court": 1,
