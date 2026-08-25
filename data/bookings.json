@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T14:14:20+07:00",
+  "generated_at": "2026-08-25T16:39:18+07:00",
   "bookings": [
     {
       "court": 1,
@@ -5623,14 +5623,14 @@
       "booker_name": "จุ๋ง"
     },
     {
-      "court": 4,
+      "court": 1,
       "date": "2026-08-25",
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "BadBadtz"
     },
     {
-      "court": 1,
+      "court": 4,
       "date": "2026-08-25",
       "start_time": "18:00",
       "end_time": "19:00",
