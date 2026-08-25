@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T16:53:53+07:00",
+  "generated_at": "2026-08-25T17:56:29+07:00",
   "bookings": [
     {
       "court": 1,
@@ -6174,48 +6174,6 @@
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "จุ๋ง"
-    },
-    {
-      "court": 1,
-      "date": "2026-10-01",
-      "start_time": "18:00",
-      "end_time": "19:00",
-      "booker_name": "นกแก้ว"
-    },
-    {
-      "court": 1,
-      "date": "2026-10-03",
-      "start_time": "17:00",
-      "end_time": "19:00",
-      "booker_name": "อ้อ(นกแก้ว)"
-    },
-    {
-      "court": 1,
-      "date": "2026-10-06",
-      "start_time": "17:00",
-      "end_time": "19:00",
-      "booker_name": "Badbadz"
-    },
-    {
-      "court": 1,
-      "date": "2026-10-13",
-      "start_time": "17:00",
-      "end_time": "19:00",
-      "booker_name": "Badbadz"
-    },
-    {
-      "court": 1,
-      "date": "2026-10-20",
-      "start_time": "17:00",
-      "end_time": "19:00",
-      "booker_name": "Badbadz"
-    },
-    {
-      "court": 1,
-      "date": "2026-10-27",
-      "start_time": "17:00",
-      "end_time": "19:00",
-      "booker_name": "Badbadz"
     }
   ],
   "common_room": [
