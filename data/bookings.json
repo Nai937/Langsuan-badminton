@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T20:29:20+07:00",
+  "generated_at": "2026-08-26T20:29:43+07:00",
   "bookings": [
     {
       "court": 1,
@@ -6209,13 +6209,6 @@
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "จุ๋ง"
-    },
-    {
-      "court": 1,
-      "date": "2026-10-02",
-      "start_time": "18:00",
-      "end_time": "19:00",
-      "booker_name": "นกแก้ว"
     },
     {
       "court": 4,
