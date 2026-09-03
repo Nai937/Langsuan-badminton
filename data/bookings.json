@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T18:53:18+07:00",
+  "generated_at": "2026-09-03T19:56:50+07:00",
   "bookings": [
     {
       "court": 1,
@@ -5926,13 +5926,6 @@
     {
       "court": 4,
       "date": "2026-09-04",
-      "start_time": "17:00",
-      "end_time": "18:00",
-      "booker_name": "นกแก้ว"
-    },
-    {
-      "court": 4,
-      "date": "2026-09-04",
       "start_time": "18:00",
       "end_time": "19:00",
       "booker_name": "นกแก้ว"
@@ -6314,6 +6307,13 @@
       "start_time": "17:00",
       "end_time": "19:00",
       "booker_name": "จุ๋ง"
+    },
+    {
+      "court": 1,
+      "date": "2026-09-29",
+      "start_time": "17:00",
+      "end_time": "18:00",
+      "booker_name": "นกแก้ว"
     },
     {
       "court": 4,
