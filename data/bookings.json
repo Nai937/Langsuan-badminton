@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T22:09:58+07:00",
+  "generated_at": "2026-09-17T15:55:37+07:00",
   "bookings": [
     {
       "court": 1,
@@ -6281,13 +6281,6 @@
       "booker_name": "Benz"
     },
     {
-      "court": 1,
-      "date": "2026-09-17",
-      "start_time": "17:00",
-      "end_time": "19:00",
-      "booker_name": "Mama House Cafe'"
-    },
-    {
       "court": 4,
       "date": "2026-09-17",
       "start_time": "17:00",
@@ -6312,7 +6305,7 @@
       "court": 1,
       "date": "2026-09-17",
       "start_time": "20:00",
-      "end_time": "21:00",
+      "end_time": "22:00",
       "booker_name": "จูน"
     },
     {
@@ -7339,7 +7332,7 @@
     {
       "date": "2026-09-26",
       "start_time": "10:00",
-      "end_time": "11:00",
+      "end_time": "15:00",
       "booker_name": "สัมมนาคุมอง"
     }
   ],
