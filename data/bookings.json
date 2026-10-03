@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T20:38:18+07:00",
+  "generated_at": "2026-10-03T10:59:56+07:00",
   "bookings": [
     {
       "court": 1,
@@ -6734,6 +6734,13 @@
       "start_time": "19:00",
       "end_time": "21:00",
       "booker_name": "แอม"
+    },
+    {
+      "court": 2,
+      "date": "2026-10-03",
+      "start_time": "17:00",
+      "end_time": "19:00",
+      "booker_name": "เบน"
     },
     {
       "court": 4,
