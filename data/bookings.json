@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T12:14:19+07:00",
+  "generated_at": "2026-10-08T12:15:57+07:00",
   "bookings": [
     {
       "court": 1,
@@ -6895,13 +6895,6 @@
       "start_time": "17:00",
       "end_time": "18:00",
       "booker_name": "พั๊นช์"
-    },
-    {
-      "court": 4,
-      "date": "2026-10-08",
-      "start_time": "17:00",
-      "end_time": "19:00",
-      "booker_name": "Mama House Cafe'"
     },
     {
       "court": 1,
