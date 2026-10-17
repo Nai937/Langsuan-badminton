@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T17:11:06+07:00",
+  "generated_at": "2026-10-17T23:20:09+07:00",
   "bookings": [
     {
       "court": 1,
@@ -7259,13 +7259,6 @@
       "start_time": "18:00",
       "end_time": "20:00",
       "booker_name": "Badbadz"
-    },
-    {
-      "court": 1,
-      "date": "2026-10-20",
-      "start_time": "20:00",
-      "end_time": "21:00",
-      "booker_name": "แบดป๊ะหละ"
     },
     {
       "court": 1,
